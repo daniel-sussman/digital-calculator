@@ -86,33 +86,33 @@ function App() {
     <div id="page">
       <div className="frame">
         <p className="display output">{output}</p>
-        <p className="display input">{input}</p>
+        <p id="display" className="display input">{input}</p>
         <div className="button-row">
-          <button className="button wide clear" onClick={() => {setInput("0"); setOutput("")}}>AC</button>
-          <button className="button" onClick={() => {handleOperator("/")}}>/</button>
-          <button className="button" onClick={() => {handleOperator("·")}}>×</button>
+          <button id="clear" className="button wide clear" onClick={() => {setInput("0"); setOutput("")}}>AC</button>
+          <button id="divide" className="button" onClick={() => {handleOperator("/")}}>/</button>
+          <button id="multiply" className="button" onClick={() => {handleOperator("·")}}>×</button>
         </div>
         <div className="button-row">
-          <button className="button numeral" onClick={() => {handleDigit("7")}}>7</button>
-          <button className="button numeral" onClick={() => {handleDigit("8")}}>8</button>
-          <button className="button numeral" onClick={() => {handleDigit("9")}}>9</button>
-          <button className="button" onClick={handleMinus}>-</button>
+          <button id="seven" className="button numeral" onClick={() => {handleDigit("7")}}>7</button>
+          <button id="eight" className="button numeral" onClick={() => {handleDigit("8")}}>8</button>
+          <button id="nine" className="button numeral" onClick={() => {handleDigit("9")}}>9</button>
+          <button id="subtract" className="button" onClick={handleMinus}>-</button>
         </div>
         <div className="button-row">
-          <button className="button numeral" onClick={() => {handleDigit("4")}}>4</button>
-          <button className="button numeral" onClick={() => {handleDigit("5")}}>5</button>
-          <button className="button numeral" onClick={() => {handleDigit("6")}}>6</button>
-          <button className="button" onClick={() => {handleOperator("+")}}>+</button>
+          <button id="four" className="button numeral" onClick={() => {handleDigit("4")}}>4</button>
+          <button id="five" className="button numeral" onClick={() => {handleDigit("5")}}>5</button>
+          <button id="six" className="button numeral" onClick={() => {handleDigit("6")}}>6</button>
+          <button id="add" className="button" onClick={() => {handleOperator("+")}}>+</button>
         </div>
         <div className="button-row">
-          <button className="button numeral" onClick={() => {handleDigit("1")}}>1</button>
-          <button className="button numeral" onClick={() => {handleDigit("2")}}>2</button>
-          <button className="button numeral" onClick={() => {handleDigit("3")}}>3</button>
-          <button className="button equals" onClick={compute}>=</button>
+          <button id="one" className="button numeral" onClick={() => {handleDigit("1")}}>1</button>
+          <button id="two" className="button numeral" onClick={() => {handleDigit("2")}}>2</button>
+          <button id="three" className="button numeral" onClick={() => {handleDigit("3")}}>3</button>
+          <button id="equals" className="button equals" onClick={compute}>=</button>
         </div>
         <div className="button-row">
-          <button className="button wide numeral" onClick={() => {handleDigit("0")}}>0</button>
-          <button className="button numeral" onClick={() => {handleDigit(".")}}>.</button>
+          <button id="zero" className="button wide numeral" onClick={() => {handleDigit("0")}}>0</button>
+          <button id="decimal" className="button numeral" onClick={() => {handleDigit(".")}}>.</button>
         </div>
       </div>
       <div className="byline">
